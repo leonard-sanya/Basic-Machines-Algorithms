@@ -1,5 +1,5 @@
 # Implementation of Gradient-Descent
-I'll provide a description of the implementation of three common variants of gradient descent: Gradient Descent (GD), Stochastic Gradient Descent (SGD), and Mini-Batch Gradient Descent (Mini-Batch GD).
+We provide a description of the implementation of three common variants of gradient descent: Gradient Descent (GD), Stochastic Gradient Descent (SGD), and Mini-Batch Gradient Descent (Mini-Batch GD) for a simple Linear regression 
 
 1. Gradient Descent (GD):
    - GD is an optimization algorithm used to minimize the cost function of a machine learning model.
