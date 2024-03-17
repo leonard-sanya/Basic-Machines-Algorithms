@@ -33,6 +33,7 @@ To evaluate the model on our test set, we first use the predict function, which 
 
 Accuracy= (TP+TN)/(TP+FP+TN+FN)
 where:
+
 TP = True Positives
 
 TN = True Negatives
