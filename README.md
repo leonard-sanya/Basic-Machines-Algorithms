@@ -1,28 +1,43 @@
-# Implementation of Gradient-Descent
-We provide a description of the implementation of three common variants of gradient descent: Gradient Descent (GD), Stochastic Gradient Descent (SGD), and Mini-Batch Gradient Descent (Mini-Batch GD) for a simple Linear regression 
+# Implementation of Linear Regression
+We provide a description of the implementation of a simple Linear regression model using gradient descent.
 
 1. Gradient Descent (GD):
    - GD is an optimization algorithm used to minimize the cost function of a machine learning model.
    - GD calculates the gradients of the cost function with respect to all training examples in the dataset and updates the parameters accordingly.
    - The algorithm repeats the process until it converges to a minimum or reaches a predetermined number of iterations.
 
-2. Stochastic Gradient Descent (SGD):
-   - SGD is a variant of GD that updates the model's parameters based on the gradient of the cost function computed on a single training example at each iteration.
-   - Instead of summing the gradients over all training examples, SGD updates the parameters after processing each individual.
-   - SGD is computationally efficient as it requires less memory and can process each example in parallel.
-
-3. Mini-Batch Gradient Descent (Mini-Batch GD):
-   - Mini-Batch GD is a compromise between GD and SGD, where the algorithm updates the model's parameters based on the gradients computed on a mini-batch of training examples
-
 The implementation of these algorithms often involves the following steps:
 1. Initialize the model's parameters randomly.
-2. Iterate over the training data for a certain number of epochs (passes through the entire dataset).
-3. In each epoch, randomly shuffle the training data.
-4. Divide the training data into mini-batches (in the case of Mini-Batch GD) or use a single example (in the case of SGD).
-5. Compute the gradients of the cost function with respect to the model's parameters using the mini-batch or single example.
-6. Update the model's parameters by taking a step in the direction of the negative gradient.
-7. Repeat steps until all mini-batches or examples have been processed.
-8. Evaluate the model's performance on a separate validation or test set to monitor its progress.
-9. Continue training until convergence or a predefined stopping criterion is met.
+2. Using the initialized parameters, we make a prediction(y_pred)
+3. We then compute the loss (Mean Squared Error)of model prediction(y_pred) compared to the true y value.
+4. Using the loss obtained, we compute the gradients of the cost function with respect to the model parameters..
+5. Update the model's parameters by taking a step in the direction of the negative gradient.
+6. Evaluate the model's performance on a separate validation or test set to monitor its progress.
+7. Continue training until convergence or a predefined stopping criterion is met.
 
+# Implementation of Logistic Regression
+The Logistic Regression model is designed to classify data points into corresponding classes. This model is implemented in Python using NumPy and Matplotlib libraries.
 
+The implementation of these algorithms involves the following steps:
+1. Initialize the model's parameters randomly.
+2. Using the initialized parameters, we make a prediction(y_pred) using a sigmoid function.
+3. We then compute the loss(Negative Log Likelihood Function) of model prediction(y_pred) compared to the true y value.
+4. Using the loss obtained, we compute the gradients of the cost function with respect to the model parameters..
+5. Update the model's parameters by taking a step in the direction of the negative gradient.
+6. Evaluate the model's performance on a separate validation or test set to monitor its progress.
+7. Continue training until convergence or a predefined stopping criterion is met.
+
+# Model Evaluation
+
+To evaluate the model on our test set, we first use the predict function, which returns the predicted probabilities of belonging to different classes. We then set a threshold of 0.5, implying that predictions with probabilities greater than or equal to 0.5 belong to class 1, and the rest belong to class 0. Next, we compute the model accuracy using the formula:
+
+Accuracy= (TP+TN)/(TP+FP+TN+FN)
+where:
+TP = True Positives
+TN = True Negatives
+FP = False Positives
+FN = False Negatives
+This metric provides an indication of how well the model is performing on the test set.
+
+# Visualization
+We used the Matplotlib libraries to visualize changes in the loss at each epoch or iteration 
